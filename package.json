@@ -1,0 +1,17 @@
+{
+  "name": "cypress-e2e-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open --config-file cypress.config.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.17.4",
+    "eslint": "^8.47.0",
+    "typescript": "^5.1.6"
+  }
+}
