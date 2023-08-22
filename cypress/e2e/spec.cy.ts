@@ -9,5 +9,6 @@ describe("Login suite", () => {
   });
   it("should logout", () => {
     cy.get("#logout2").click();
+    cy.get("#login2").should("be.visible");
   });
 });
