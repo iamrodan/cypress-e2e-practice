@@ -1,8 +1,6 @@
 describe("Login suite", () => {
   beforeEach(() => {
-    const username = Cypress.env("username");
-    const password = Cypress.env("password");
-    cy.login(username, password);
+    cy.login();
   });
   it("should login and logout", () => {
     cy.contains("Welcome admin").should("exist");

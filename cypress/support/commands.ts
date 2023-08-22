@@ -26,9 +26,11 @@
 
 //Caching session when login via page visit
 
-Cypress.Commands.add("login", (username: string, password: string) => {
-  const siteUrl = "https://www.demoblaze.com";
-  cy.visit(siteUrl);
+Cypress.Commands.add("login", () => {
+  const username = Cypress.env("username");
+  const password = Cypress.env("password");
+
+  cy.visit(Cypress.env("baseUrl"));
   cy.get("#login2").click();
   cy.get("#loginusername").should("be.visible").focus().type(username);
   cy.get("#loginpassword").should("be.visible").focus().type(password);
